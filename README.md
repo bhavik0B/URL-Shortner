@@ -2,10 +2,6 @@
 
 A simple and efficient URL Shortener built using **Node.js** and **Express**. This service allows users to convert long URLs into short, easy-to-share links, and redirect back to the original URL when accessed.
 
-## 🌐 Live Demo
-
-> Coming soon / Deployed at: [https://your-deployment-url.com](https://your-deployment-url.com)
-
 ---
 
 ## 🚀 Features
