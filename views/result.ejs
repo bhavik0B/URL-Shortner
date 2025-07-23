@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortened URL</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script>
+    function copyToClipboard() {
+        const url = document.getElementById('shortUrlText').textContent;
+        navigator.clipboard.writeText(url).then(function() {
+            document.getElementById('copyMsg').style.display = 'inline';
+            setTimeout(() => document.getElementById('copyMsg').style.display = 'none', 1500);
+        });
+    }
+    </script>
+</head>
+<body>
+    <div class="header">Your Shortened URL</div>
+    <div class="container">
+        <div class="short-url-box">
+            <span id="shortUrlText" class="short-url-link"><%= shortUrl %></span>
+            <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+            <span id="copyMsg" style="display:none; color:#007e33; margin-left:8px;">Copied!</span>
+        </div>
+        <a class="analytics-link" href="/analytics/<%= shortId %>">View Analytics</a>
+        <a href="/" style="display:block; margin-top:18px;">Shorten another URL</a>
+        <% if (recent && recent.length > 0) { %>
+            <div class="recent-list">
+                <h3>Recently Shortened</h3>
+                <ul>
+                <% recent.forEach(function(item) { %>
+                    <li><a href="/<%= item.shortId %>" target="_blank"><%= item.shortUrl %></a></li>
+                <% }) %>
+                </ul>
+            </div>
+        <% } %>
+    </div>
+    <div class="footer">&copy; <%= new Date().getFullYear() %> URL Shortener</div>
+</body>
+</html> 

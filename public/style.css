@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fb;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background: #222e50;
+    color: #fff;
+    padding: 24px 0 16px 0;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.container {
+    background: #fff;
+    max-width: 420px;
+    margin: 32px auto 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(34,46,80,0.08);
+    padding: 32px 28px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+input[type="url"] {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+button, .copy-btn {
+    padding: 12px 0;
+    background: #222e50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+    width: 100%;
+}
+button:hover, .copy-btn:hover {
+    background: #4361ee;
+}
+.message {
+    margin: 12px 0;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.message.error {
+    background: #ffe5e5;
+    color: #b00020;
+    border: 1px solid #ffb3b3;
+}
+.message.success {
+    background: #e6ffed;
+    color: #007e33;
+    border: 1px solid #b3ffd1;
+}
+.short-url-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 10px 0;
+    width: 100%;
+}
+.short-url-link {
+    font-size: 1.1rem;
+    color: #222e50;
+    word-break: break-all;
+    text-decoration: underline;
+}
+.analytics-link {
+    margin-top: 10px;
+    color: #4361ee;
+    text-decoration: none;
+    font-weight: 500;
+}
+.analytics-link:hover {
+    text-decoration: underline;
+}
+.recent-list {
+    margin-top: 18px;
+    width: 100%;
+}
+.recent-list h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #222e50;
+}
+.recent-list ul {
+    padding-left: 18px;
+    margin: 0;
+}
+.recent-list li {
+    font-size: 0.98rem;
+    margin-bottom: 4px;
+}
+.footer {
+    margin-top: auto;
+    background: #222e50;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0 10px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 18px 4vw 14px 4vw;
+    }
+    .header {
+        font-size: 1.3rem;
+        padding: 16px 0 10px 0;
+    }
+} 

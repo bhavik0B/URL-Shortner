@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Analytics for <%= shortId %></h1>
+    <p>Total Clicks: <%= totalClicks %></p>
+    <h2>Visit History</h2>
+    <ul>
+        <% analytics.forEach(function(visit) { %>
+            <li><%= new Date(visit.timestamp).toLocaleString() %></li>
+        <% }) %>
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html> 
